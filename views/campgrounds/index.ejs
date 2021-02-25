@@ -1,0 +1,49 @@
+<% layout('layouts/boilerplate')%>
+
+<div class="container ">
+    <h1 class="package">Top Packages</h1>
+    
+<!-- <div class="row text-center" style="display : flex ; flex-wrap : wrap ;">
+
+    <% for (let campground of campgrounds) { %>
+    <div class="col-md-3 col-sm-6">
+        <div class="thumbnail"> 
+            <%if(campground.images.length) {%>
+                <img class="img-fluid" style="width:100%;" alt="" src="<%=campground.images[0].url%>">
+                <% }else {%>
+                <img class="img-fluid" style="width:100%" alt=""
+                    img-src="https://res.cloudinary.com/douqbebwk/image/upload/v1600103881/YelpCamp/lz8jjv2gyynjil7lswf4.png">
+                <% } %>
+            <div class="caption">
+                <h4><%= campground.title %> </h4>
+            </div>
+                <p>   
+                    <a class="btn btn-primary" href="/campgrounds/<%=campground._id%>">View <%=campground.title%></a>
+                </p>
+            </div>
+        </div>
+        <% } %>
+
+    </div> -->
+
+    <div class="row">
+        <% for (let campground of campgrounds) { %>
+        <div class="column ">
+        
+          <div class="card">
+            <%if(campground.images.length) {%>
+                <img class="img-responsive" style="width:100%;" alt="" src="<%=campground.images[0].url%>">
+                <% }else {%>
+                <img class="img-responsive" style="width:100%;" alt=""
+                    img-src="https://res.cloudinary.com/douqbebwk/image/upload/v1600103881/YelpCamp/lz8jjv2gyynjil7lswf4.png">
+                <% } %>
+            <h3><%= campground.title %></h3>
+              <p><%= campground.location%></p>
+              <p class="des"><%= campground.description %></p>   
+              <a class="btn btn-primary" href="/campgrounds/<%=campground._id%>">View <%=campground.title%></a>
+          </div>
+
+        </div>
+        <% } %>
+</div>
+

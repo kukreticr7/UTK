@@ -1,0 +1,33 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">UTKTRAVELS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/campgrounds">Packages</a>
+                <a class="nav-link" href="/contact">Contact</a>
+            </div>
+            <div class="navbar-nav ml-auto">
+                <% if(!currentUser) {%>
+                <!-- <a class="nav-link" href="/login">Login</a>
+                <a class="nav-link" href="/register">Register</a> -->
+                <% } else {%>
+                <a class="nav-link" href="/campgrounds/new">New Campground</a>
+                <a class="nav-link" href="/logout">Logout</a>
+                <% } %>
+            </div>
+            <div >
+                <ul class="social-icons">
+                  <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                  <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>  
+                  <li><a class="Whatsapp" href="#"><i class="fab fa-whatsapp"></i></a></li>
+                </ul>
+              </div>
+        </div>
+    </div>
+</nav>
+
